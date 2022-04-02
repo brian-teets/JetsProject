@@ -10,7 +10,14 @@ public class JetsApplication {
 		
 		AirField a = new AirField(); // just for testing 
 		
-
-	}
+	} // end of main
+	
+	public void launch() {
+		
+	} // end of launch method 
+	
+	public void displayUserMenu() {
+		
+	} // end of displayUserMenu method 
 
 }

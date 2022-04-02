@@ -26,10 +26,11 @@ public class AirField {
 			while ((line = bufIn.readLine()) != null) {
 				String[] row = line.split(",");
 				
-//				if(row[0].equals("Passenger")) {
-//					Jet passenger1 = new Passenger(); 
+////				if(row[0].equals("Passenger")) {
+////					Jet passenger1 = new Passenger(); 
+//					
 //				}
-				System.out.println(line);
+				System.out.println(line); 
 			}
 			bufIn.close();
 
@@ -38,4 +39,4 @@ public class AirField {
 		}
 	}
 
-}
+} 
