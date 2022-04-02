@@ -1,9 +1,11 @@
 package com.skilldistillery.jets.entities;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +19,7 @@ public class AirField {
 		// file
 		fleet = new ArrayList<>();
 		readFromFile("jets.txt");
-		writeToFile("jets2.txt");
+//		writeToFile();
 	}
 
 	public void readFromFile(String fn) {
@@ -59,9 +61,10 @@ public class AirField {
 		}
 	}
 	
-	public void writeToFile(String fn) {
+	public void writeToFile(Writer fn) {
 		try {
-			FileWriter fw = new FileWriter(fn);
+			BufferedWriter writer = new BufferedWriter( new FileWriter("jets2.txt") );
+			writer.write("Test output text"); 
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
