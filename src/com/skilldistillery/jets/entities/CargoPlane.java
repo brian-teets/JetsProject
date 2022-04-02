@@ -17,10 +17,10 @@ public class CargoPlane extends Jet implements CargoCarrier {
 	public void loadCargo() {
 		System.out.println();
 		System.out.println("===beginning loading cargo===");
-		System.out.println("===still loading cargo===");
+		System.out.println("====still loading cargo====");
 		System.out.println();
 		System.out.println("===this stuff is heavy, you guys!===");
-		System.out.println("===done loading cargo===");
+		System.out.println("=======done loading cargo======");
 		System.out.println(); 
 	}
 
