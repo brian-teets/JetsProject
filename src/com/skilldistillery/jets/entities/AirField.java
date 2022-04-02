@@ -30,7 +30,7 @@ public class AirField {
 ////					Jet passenger1 = new Passenger(); 
 //					
 //				}
-				System.out.println(line); 
+				System.out.println(line); // for testing 
 			}
 			bufIn.close();
 

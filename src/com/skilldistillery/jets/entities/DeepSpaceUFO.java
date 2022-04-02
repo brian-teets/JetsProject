@@ -14,7 +14,7 @@ public class DeepSpaceUFO extends Jet implements UFO {
 
 	@Override
 	public void cloaking() {
-		System.out.println( "Observer: " + " Whoa, where'd that thing go? It just disappeared! " ); 
+		System.out.println( " ===== Whoa, where'd that thing go? It just disappeared! ===== " ); 
 		
 	} 
 

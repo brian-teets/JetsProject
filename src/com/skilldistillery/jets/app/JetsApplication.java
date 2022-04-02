@@ -8,13 +8,13 @@ public class JetsApplication {
 		
 		JetsApplication jetsApp = new JetsApplication();
 		
-		AirField a = new AirField(); // just for testing 
+		 jetsApp.launch();
 		
 	} // end of main
 	
 	public void launch() {
 		
-		
+		AirField a = new AirField(); // creates a new AirField object
 		
 	} // end of launch method 
 	
