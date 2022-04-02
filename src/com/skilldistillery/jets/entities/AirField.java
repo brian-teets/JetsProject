@@ -25,12 +25,17 @@ public class AirField {
 
 			while ((line = bufIn.readLine()) != null) {
 				String[] row = line.split(",");
+				String typeOfJet = row[0];
+				String model = row[1];
+				double speed = Double.parseDouble(row[2]);
+				int range = Integer.parseInt(row[3]);
+				long price = Long.parseLong(row[4]); 
 				
-////				if(row[0].equals("Passenger")) {
-////					Jet passenger1 = new Passenger(); 
+//				if(row[0].equals("Passenger")) {
+//					Jet passenger1 = new Passenger(passenger1[0], ); 
 //					
 //				}
-				System.out.println(line); // for testing 
+//				System.out.println(line); // for testing 
 			}
 			bufIn.close();
 
