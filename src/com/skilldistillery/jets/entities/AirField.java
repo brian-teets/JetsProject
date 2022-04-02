@@ -2,6 +2,8 @@ package com.skilldistillery.jets.entities;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +16,8 @@ public class AirField {
 		// TODO AirField constructor can call readFromFile method and pass in the txt
 		// file
 		fleet = new ArrayList<>();
-
 		readFromFile("jets.txt");
+		writeToFile("jets.txt");
 	}
 
 	public void readFromFile(String fn) {
@@ -53,6 +55,16 @@ public class AirField {
 			bufIn.close();
 
 		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void writeToFile(String fn) {
+		try {
+			FileWriter fw = new FileWriter(fn);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
