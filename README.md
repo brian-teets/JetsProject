@@ -79,7 +79,7 @@ A user can remove a jet from the fleet.
 #### User Story #11
 Quit exits the program. 
 
-## How To Run The Program
+### How To Run The Program
 
 * It is assumed the user has an IDE, such as Eclipse. 
 * Download and install the .java file to local Eclipse workspace.
@@ -88,7 +88,7 @@ Quit exits the program.
 	*PLACEHOLDER 
 		
 
-## Technologies / Skills Used 
+### Technologies / Skills Used 
 
 * Java
 * Eclipse
@@ -97,6 +97,6 @@ Quit exits the program.
 * Slack
 * Zoom  
 
-## Lessons Learned 
+### Lessons Learned 
 
 * PLACEHOLDER
