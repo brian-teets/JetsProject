@@ -1,2 +1,5 @@
-Passenger,Cessna Grand Caravan,213.75,1231,2450000
+Passenger,Cessna Grand Caravan,212.75,1231,2450000
 Passenger,Piper Archer DX,141.67,975,420000
+DeepSpaceUFO,Millenium Falcon,652.75,150000,5000000
+CargoPlane,Lockheed C-5 Galaxy,579.25,7275,12900000
+FighterJet,Lockheed Martin F-35 Lightning II,1200.00,650,82000000
