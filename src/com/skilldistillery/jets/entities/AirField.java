@@ -31,10 +31,23 @@ public class AirField {
 				int range = Integer.parseInt(row[3]);
 				long price = Long.parseLong(row[4]); 
 				
-//				if(row[0].equals("Passenger")) {
-//					Jet passenger1 = new Passenger(passenger1[0], ); 
-//					
-//				}
+				if(typeOfJet.equalsIgnoreCase("Passenger")) {
+					Jet passengerJet = new Passenger(model, speed, range, price); 
+					fleet.add(passengerJet);
+				}
+				else if(typeOfJet.equalsIgnoreCase("CargoPlane")) {
+					Jet cargoPlane = new CargoPlane(model, speed, range, price);
+					fleet.add(cargoPlane);
+				}
+				else if(typeOfJet.equalsIgnoreCase("FighterJet")) {
+					Jet fighterJet = new FighterJet(model, speed, range, price); 
+					fleet.add(fighterJet);
+				}
+				else if(typeOfJet.equalsIgnoreCase("DeepSpaceUFO")) {
+					Jet UFO = new DeepSpaceUFO(model, speed, range, price);
+					fleet.add(UFO); 
+				}
+				
 //				System.out.println(line); // for testing 
 			}
 			bufIn.close();
