@@ -17,7 +17,7 @@ public class AirField {
 		// file
 		fleet = new ArrayList<>();
 		readFromFile("jets.txt");
-		writeToFile("jets.txt");
+		writeToFile("jets2.txt");
 	}
 
 	public void readFromFile(String fn) {
@@ -67,6 +67,10 @@ public class AirField {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public void listAllJets() {
+//		System.out.println( Jet );
 	}
 
 } 
