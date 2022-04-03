@@ -76,8 +76,8 @@ public class JetsApplication {
 					System.out.println("PLACEHOLDER FOR OPTION 5: SPECIALIALIZED METHOD CALL - LOAD ALL CARGO PLANES ");
 					break;
 				case 6:
-					System.out.println(
-							"PLACEHOLDER FOR OPTION 6: SPECIALIALIZED METHOD CALL - MAKE ALL FIGHTER JETS PERFORM FIGHT METHOD BEHAVIOR");
+					// Dogfight menu option
+					aF.callAllFighterJetsToFight(); 
 					break;
 				case 7:
 					aF.addAJetToFleet();

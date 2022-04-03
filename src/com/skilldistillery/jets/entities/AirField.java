@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class AirField {
 	private List<Jet> fleet; // variable name could also be called jets based on UML
 	Scanner sc = new Scanner(System.in);
+	private List<FighterJet> fighter;
 
 	public AirField() {
 
@@ -62,6 +63,14 @@ public class AirField {
 	public void setFleet(List<Jet> fleet) {
 		this.fleet = fleet;
 	}
+	
+	public List<FighterJet> getFighter() {
+		return fighter;
+	}
+
+	public void setFighter(List<FighterJet> fighter) {
+		this.fighter = fighter; 
+	}
 
 	public void listAllJets() {
 		for (int i = 0; i < fleet.size(); i++) {
@@ -77,7 +86,6 @@ public class AirField {
 	} 
 
 	public void addAJetToFleet() {
-		// fleet.add( pass in a new Jet object? ) ?
 		String model = null;
 		double speed = 0.00;
 		int range = 0;
@@ -98,9 +106,10 @@ public class AirField {
 
 	public void removeAJetFromFleet() {
 		listAllJets();
-		int removeChoice = 0;
+		int removeChoice; 
 		System.out.println();
 		System.out.println("Which aircraft do you want to remove from the fleet? ");
+		// TODO - need to create a sub-menu with a number at beginning of list of all jets 
 		removeChoice = sc.nextInt(); 
 		fleet.remove(removeChoice); 
 	}
@@ -121,7 +130,10 @@ public class AirField {
 	}
 
 	public void callAllFighterJetsToFight() {
-		// from fleet of all Jet objects, get typeOfJet.equals("FighterJet") ?
+		for (int i = 0; i < fighter.size(); i ++) {
+			
+			fighter.get(i).fight();
+		}
 	}
 
 }

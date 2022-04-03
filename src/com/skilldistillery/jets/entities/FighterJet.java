@@ -12,12 +12,13 @@ public class FighterJet extends Jet implements CombatReady {
 		super(model, speed, range, price);
 		// TODO Auto-generated constructor stub
 	}
+	
 
 	@Override
 	public void fight() {
 		
 		for(int i = 0; i < 3; i ++ ) {
-			System.out.print( "PEW-PEW!" );
+			System.out.print( this.getModel() + " || " + "PEW-PEW!" );
 		} 
 		
 	}
