@@ -113,6 +113,8 @@ public class AirField {
 			jet.getRange();
 			
 			/*
+			 * How can I adapt this from the Food Truck project?
+			 * 
 			 * 	FoodTruck highestRated = trucks[0];
 
 				for (int i = 0; i < trucks.length; i++) {
