@@ -11,6 +11,8 @@ public abstract class Jet {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public abstract void fly(); 
 
 
 	public Jet(String model, double speed, int range, long price) {

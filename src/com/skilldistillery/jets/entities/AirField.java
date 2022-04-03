@@ -1,11 +1,7 @@
 package com.skilldistillery.jets.entities;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,10 +14,9 @@ public class AirField {
 		// file
 		fleet = new ArrayList<>();
 		readFromFile("jets.txt");
-//		writeToFile();
 	}
 
-	public void readFromFile(String fn) {
+	public List<Jet> readFromFile(String fn) {
 		try {
 			BufferedReader bufIn = new BufferedReader(new FileReader(fn));
 			String line;
@@ -55,37 +50,36 @@ public class AirField {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return fleet;
 	}
 
-//	public void writeToFile(Writer fn) {
-//		try {
-//			BufferedWriter writer = new BufferedWriter( new FileWriter("jets2.txt") );
-//			writer.write("Test output text"); 
-//			
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
+	public List<Jet> getFleet() {
+		return fleet;
+	}
 
-	public void removeFromFile() {  // do I even need this method? do i need to remove or change anything directly on the txt file?
-
+	public void setFleet(List<Jet> fleet) {
+		this.fleet = fleet;
 	}
 
 	public void listAllJets() {
-		// will use array list get method?   like, fleet.get(); ? 
+		for (int i = 0; i < fleet.size(); i++) {
+			System.out.println(fleet.get(i));
+			System.out.println();
+		}
 	}
 
-	public void addAJetToFleet() {
-		// fleet.add(  pass in a new Jet object?  ) ?
-	}
-	
-	public void removeAJetFromFleet() {
-		// call fleet.remove(  what do i pass in as an argument?  ) ?
-	} 
-	
 	public void flyAllJets() {
-		// from fleet of all Jet objects, call Jet.fly() ? I don't know if this would work or makes sense.
+		for (int i = 0; i < fleet.size(); i ++) {
+			 fleet.get(i).fly();
+		}
+	} 
+
+	public void addAJetToFleet() {
+		// fleet.add( pass in a new Jet object? ) ?
+	}
+
+	public void removeAJetFromFleet() {
+		// call fleet.remove( what do i pass in as an argument? ) ?
 	}
 
 	public void viewFastestJet() {
@@ -99,12 +93,12 @@ public class AirField {
 	}
 
 	public void loadAllCargoPlanes() {
-		// from fleet of all Jet objects, get typeOfJet.equals("CargoPlane") ? 
+		// from fleet of all Jet objects, get typeOfJet.equals("CargoPlane") ?
 
 	}
 
 	public void callAllFighterJetsToFight() {
-		// from fleet of all Jet objects, get typeOfJet.equals("FighterJet") ? 
+		// from fleet of all Jet objects, get typeOfJet.equals("FighterJet") ?
 	}
 
 }

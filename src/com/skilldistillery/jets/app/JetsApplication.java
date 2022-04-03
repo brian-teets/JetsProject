@@ -6,30 +6,42 @@ import java.util.Scanner;
 import com.skilldistillery.jets.entities.AirField;
 
 public class JetsApplication {
+	
+	private AirField aF = new AirField(); // creates a new AirField object 
+	private Scanner scanner = new Scanner(System.in);
+
+	public JetsApplication(AirField airField, Scanner scanner) {
+		this.aF = airField;
+		this.scanner = scanner;
+	}
+
+	public JetsApplication() {
+		// TODO Auto-generated constructor stub
+	}
+	
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		JetsApplication jetsApp = new JetsApplication(); 
+		
 
-		JetsApplication jetsApp = new JetsApplication();
+		jetsApp.launch(); 
 
-		jetsApp.displayUserMenu(scanner);
-
-//		jetsApp.launch(); 
-
-		scanner.close();
+//		scanner.close(); // not quite sure where in the class to close the scanner 
 	} // end of main
 
-	public void launch() {
+	private void launch() {
+		
+		displayUserMenu();
 
-		AirField a = new AirField(); // creates a new AirField object
 
 	} // end of launch method
 
-	public void displayUserMenu(Scanner choice) {
+	public void displayUserMenu() { 
 
 		String keepGoing = "Y";
 		
 		while (keepGoing.toUpperCase().equals("Y")) {
+			System.out.println();
 			System.out.println("Please choose from the following menu: ");
 			System.out.println();
 			System.out.println("1 List all aircraft in fleet");
@@ -45,14 +57,13 @@ public class JetsApplication {
 			System.out.println();
 
 			try {
-				int userMenuChoice = choice.nextInt(); 
+				int userMenuChoice = scanner.nextInt(); 
 				switch (userMenuChoice) {
 				case 1:
-					System.out.println(
-							"PLACEHOLDER FOR OPTION 1: METHOD CALL TO AIRFIELD CLASS WITH A LIST ALL JETS METHOD");
+					aF.listAllJets();
 					break;
 				case 2:
-					System.out.println("PLACEHOLDER FOR OPTION 2: METHOD CALL TO FLY ALL AIRCRAFT");
+					aF.flyAllJets();
 					break;
 				case 3:
 					System.out.println("PLACEHOLDER FOR OPTION 3: METHOD CALL TO DISPLAY FASTEST AIRCRAFT");
@@ -85,9 +96,9 @@ public class JetsApplication {
 				System.err.println("Invalid input. Expected a number input between 1 and 9. You entered something else!");
 				System.out.println("Please enter a valid option from the menu.");
 				System.out.println(); 
-				choice.nextLine();
+				scanner.nextLine();
 				System.out.println("Return to main menu? (Y/N)"); 
-				keepGoing = choice.nextLine(); 
+				keepGoing = scanner.nextLine(); 
 				if(keepGoing.toUpperCase().equals("Y")) {
 					keepGoing = "Y";
 				}
@@ -100,5 +111,5 @@ public class JetsApplication {
 		} 
 
 	} // end of displayUserMenu method
-
+	
 }

@@ -11,6 +11,12 @@ public class Passenger extends Jet {
 		super(model, speed, range, price);
 		// speed in MPH, range in miles, price in US dollars
 	}
+
+	@Override
+	public void fly() {
+		System.out.println("Passenger Jet : " + " zoom zoom!");
+		
+	}
 	
 	
 }
