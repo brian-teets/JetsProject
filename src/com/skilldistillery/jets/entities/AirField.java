@@ -68,41 +68,43 @@ public class AirField {
 //		}
 //	}
 
-	public void removeFromFile() {  // do I even need this method? are we needing to remove or change anything directly on the txt file?
+	public void removeFromFile() {  // do I even need this method? do i need to remove or change anything directly on the txt file?
 
 	}
 
 	public void listAllJets() {
-		// will use array list get method? 
+		// will use array list get method?   like, fleet.get(); ? 
 	}
 
 	public void addAJetToFleet() {
-		
+		// fleet.add(  pass in a new Jet object?  ) ?
 	}
 	
 	public void removeAJetFromFleet() {
-		
+		// call fleet.remove(  what do i pass in as an argument?  ) ?
 	} 
 	
 	public void flyAllJets() {
-
+		// from fleet of all Jet objects, call Jet.fly() ? I don't know if this would work or makes sense.
 	}
 
 	public void viewFastestJet() {
+		// will use Jet.getSpeed? and will need a min max type comparison expression
 
 	}
 
 	public void viewJetWithLongestRange() {
+		// will use Jet.getRange? and will need a min max type comparison expression
 
 	}
 
 	public void loadAllCargoPlanes() {
+		// from fleet of all Jet objects, get typeOfJet.equals("CargoPlane") ? 
 
 	}
 
 	public void callAllFighterJetsToFight() {
-
+		// from fleet of all Jet objects, get typeOfJet.equals("FighterJet") ? 
 	}
-
 
 }
