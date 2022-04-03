@@ -14,8 +14,8 @@ public class Passenger extends Jet {
 
 	@Override
 	public void fly() {
-		System.out.println("Passenger Jet : " + " zoom zoom!");
-		
+		System.out.println( this.getModel() + " || Approximate flight time: " + " " + (this.getRange() / this.getSpeed()) + " hours");
+		System.out.println();
 	}
 	
 	

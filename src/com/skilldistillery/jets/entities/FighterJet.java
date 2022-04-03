@@ -24,22 +24,8 @@ public class FighterJet extends Jet implements CombatReady {
 
 	@Override
 	public void fly() {
-		System.out.println("Fighter Jet goes: ZoooooM!");
-//		   /\
-//		   \ \
-//		    \ \
-//		    /  \
-//		   <===>\
-//		   <    )>
-//		   <===>/
-//		    \  /
-//		    / /
-//		   / /
-//		   \/
-
-		
-		//https://asciiart.website/index.php?art=transportation/airplanes
-
+		System.out.println( this.getModel() + " || Approximate flight time:" + " " + (this.getRange() / this.getSpeed()) + " hours");
+		System.out.println();
 	}
 	
 

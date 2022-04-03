@@ -8,7 +8,7 @@ import com.skilldistillery.jets.entities.AirField;
 public class JetsApplication {
 	
 	private AirField aF = new AirField(); // creates a new AirField object 
-	private Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 
 	public JetsApplication(AirField airField, Scanner scanner) {
 		this.aF = airField;
@@ -26,13 +26,14 @@ public class JetsApplication {
 
 		jetsApp.launch(); 
 
-//		scanner.close(); // not quite sure where in the class to close the scanner 
+		
 	} // end of main
 
 	private void launch() {
 		
 		displayUserMenu();
 
+		scanner.close(); // not quite sure where in the class to close the scanner 
 
 	} // end of launch method
 
@@ -79,10 +80,10 @@ public class JetsApplication {
 							"PLACEHOLDER FOR OPTION 6: SPECIALIALIZED METHOD CALL - MAKE ALL FIGHTER JETS PERFORM FIGHT METHOD BEHAVIOR");
 					break;
 				case 7:
-					System.out.println("PLACEHOLDER FOR OPTION 7: METHOD CALL TO ADD AN AIRCRAFT TO THE FLEET");
+					aF.addAJetToFleet();
 					break;
 				case 8:
-					System.out.println("PLACEHOLDER FOR OPTION 8: METHOD CALL TO REMOVE AN AIRCRAFT FROM THE FLEET");
+					aF.removeAJetFromFleet();
 					break;
 				case 9:
 					System.out.println("==You chose to quit the application==");

@@ -4,9 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class AirField {
 	private List<Jet> fleet; // variable name could also be called jets based on UML
+	Scanner sc = new Scanner(System.in);
 
 	public AirField() {
 
@@ -63,7 +65,7 @@ public class AirField {
 
 	public void listAllJets() {
 		for (int i = 0; i < fleet.size(); i++) {
-			System.out.println(fleet.get(i));
+			System.out.println(  fleet.get(i));
 			System.out.println();
 		}
 	}
@@ -76,10 +78,31 @@ public class AirField {
 
 	public void addAJetToFleet() {
 		// fleet.add( pass in a new Jet object? ) ?
+		String model = null;
+		double speed = 0.00;
+		int range = 0;
+		long price = 0;
+		
+		System.out.println("Enter the model name of aircraft you want to add: ");
+		model = sc.nextLine();
+		System.out.println("Enter speed: ");
+		speed = sc.nextDouble();
+		System.out.println("Enter the aircraft's range as a whole number: ");
+		range = sc.nextInt();
+		System.out.println("Please enter the price of the aircraft: ");
+		price = sc.nextLong();
+		
+		Jet passengerJet = new Passenger(model, speed, range, price); 
+		fleet.add(passengerJet);
 	}
 
 	public void removeAJetFromFleet() {
-		// call fleet.remove( what do i pass in as an argument? ) ?
+		listAllJets();
+		int removeChoice = 0;
+		System.out.println();
+		System.out.println("Which aircraft do you want to remove from the fleet? ");
+		removeChoice = sc.nextInt(); 
+		fleet.remove(removeChoice); 
 	}
 
 	public void viewFastestJet() {
