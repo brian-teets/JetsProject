@@ -77,7 +77,7 @@ public class JetsApplication {
 					break;
 				case 6:
 					// Dogfight menu option
-					aF.callAllFighterJetsToFight(); 
+					aF.callAllFighterJetsToFight(aF.getFleet()); 
 					break;
 				case 7:
 					aF.addAJetToFleet();
@@ -91,8 +91,7 @@ public class JetsApplication {
 					keepGoing = "N";
 					break;
 				}
-			}
-
+			} 
 			catch (InputMismatchException e) {
 				System.err.println("Invalid input. Expected a number input between 1 and 9. You entered something else!");
 				System.out.println("Please enter a valid option from the menu.");

@@ -129,11 +129,20 @@ public class AirField {
 
 	}
 
-	public void callAllFighterJetsToFight() {
-		for (int i = 0; i < fighter.size(); i ++) {
+	public void callAllFighterJetsToFight(List<Jet> fleet) {
+//		for (int i = 0; i < fleet.size(); i ++) {
+			FighterJet fJ = new FighterJet();
+//			fighter.get(i).fight();
+//			if ( fleet.indexOf(i) ) {
+//				System.out.println( fleet.get(i) ); 
+//			}
 			
-			fighter.get(i).fight();
-		}
+			for (Jet fighterJet : fleet) {
+				if(fighterJet.getClass().equals(fJ.getClass())) {
+					((FighterJet)fighterJet).fight(); 
+				}
+			}
+
 	}
 
 }
