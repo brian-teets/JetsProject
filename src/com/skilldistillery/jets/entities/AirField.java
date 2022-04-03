@@ -68,14 +68,22 @@ public class AirField {
 //		}
 //	}
 
-	public void removeFromFile() {
+	public void removeFromFile() {  // do I even need this method? are we needing to remove or change anything directly on the txt file?
 
 	}
 
 	public void listAllJets() {
-//		System.out.println( Jet );
+		// will use array list get method? 
 	}
 
+	public void addAJetToFleet() {
+		
+	}
+	
+	public void removeAJetFromFleet() {
+		
+	} 
+	
 	public void flyAllJets() {
 
 	}
@@ -96,12 +104,5 @@ public class AirField {
 
 	}
 
-	public void addAJetToFleet() {
-
-	}
-
-	public void removeAJetFromFleet() {
-
-	} 
 
 }
