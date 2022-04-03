@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class AirField {
 	private List<Jet> fleet; // variable name could also be called jets based on UML
-	Scanner sc = new Scanner(System.in);
-	private List<FighterJet> fighter;
+	Scanner sc = new Scanner(System.in); 
 
 	public AirField() {
 
@@ -63,34 +63,26 @@ public class AirField {
 	public void setFleet(List<Jet> fleet) {
 		this.fleet = fleet;
 	}
-	
-	public List<FighterJet> getFighter() {
-		return fighter;
-	}
-
-	public void setFighter(List<FighterJet> fighter) {
-		this.fighter = fighter; 
-	}
 
 	public void listAllJets() {
 		for (int i = 0; i < fleet.size(); i++) {
-			System.out.println(  fleet.get(i));
+			System.out.println(fleet.get(i));
 			System.out.println();
 		}
 	}
 
 	public void flyAllJets() {
-		for (int i = 0; i < fleet.size(); i ++) {
-			 fleet.get(i).fly();
+		for (int i = 0; i < fleet.size(); i++) {
+			fleet.get(i).fly();
 		}
-	} 
+	}
 
 	public void addAJetToFleet() {
 		String model = null;
 		double speed = 0.00;
 		int range = 0;
 		long price = 0;
-		
+
 		System.out.println("Enter the model name of aircraft you want to add: ");
 		model = sc.nextLine();
 		System.out.println("Enter speed: ");
@@ -99,23 +91,41 @@ public class AirField {
 		range = sc.nextInt();
 		System.out.println("Please enter the price of the aircraft: ");
 		price = sc.nextLong();
-		
-		Jet passengerJet = new Passenger(model, speed, range, price); 
+
+		Jet passengerJet = new Passenger(model, speed, range, price);
 		fleet.add(passengerJet);
 	}
 
 	public void removeAJetFromFleet() {
 		listAllJets();
-		int removeChoice; 
+		int removeChoice;
 		System.out.println();
 		System.out.println("Which aircraft do you want to remove from the fleet? ");
-		// TODO - need to create a sub-menu with a number at beginning of list of all jets 
-		removeChoice = sc.nextInt(); 
-		fleet.remove(removeChoice); 
+		// TODO - need to create a sub-menu with a number at beginning of list of all
+		// jets
+		removeChoice = sc.nextInt();
+		fleet.remove(removeChoice);
 	}
 
-	public void viewFastestJet() {
-		// will use Jet.getSpeed? and will need a min max type comparison expression
+	public void viewFastestJet(List<Jet> fleet) {
+		
+		for (Jet jet : fleet) {
+			jet.getRange();
+			
+			/*
+			 * 	FoodTruck highestRated = trucks[0];
+
+				for (int i = 0; i < trucks.length; i++) {
+					if (trucks[i] == null) {
+						continue;
+					}
+
+					if (highestRated.getRating() < trucks[i].getRating()) {
+						highestRated = trucks[i];
+					} 
+			 */
+			
+		}
 
 	}
 
@@ -130,19 +140,14 @@ public class AirField {
 	}
 
 	public void callAllFighterJetsToFight(List<Jet> fleet) {
-//		for (int i = 0; i < fleet.size(); i ++) {
-			FighterJet fJ = new FighterJet();
-//			fighter.get(i).fight();
-//			if ( fleet.indexOf(i) ) {
-//				System.out.println( fleet.get(i) ); 
-//			}
-			
-			for (Jet fighterJet : fleet) {
-				if(fighterJet.getClass().equals(fJ.getClass())) {
-					((FighterJet)fighterJet).fight(); 
-				}
-			}
 
+		FighterJet fJ = new FighterJet();
+
+		for (Jet fighterJet : fleet) {
+			if (fighterJet.getClass().equals(fJ.getClass())) {
+				((FighterJet) fighterJet).fight();
+			}
+		}
 	}
 
 }
