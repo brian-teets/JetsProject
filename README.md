@@ -87,7 +87,8 @@ Quit exits the program.
 * Download and install the .java file to local Eclipse workspace.
 * Run the program
 
-	*PLACEHOLDER 
+	* At the main menu, enter an integer number corresponding to one of the menu options.
+	* Follow any prompts at sub-menus.
 		
 
 ### Technologies / Skills Used 
@@ -101,4 +102,4 @@ Quit exits the program.
 
 ### Lessons Learned 
 
-* PLACEHOLDER
+* Commit and push frequently - a practice I began on the previous weekend projects which helped me a lot on this project
