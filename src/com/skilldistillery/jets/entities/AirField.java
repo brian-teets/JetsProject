@@ -66,7 +66,11 @@ public class AirField {
 
 	public void listAllJets() {
 		for (int i = 0; i < fleet.size(); i++) {
-			System.out.println(fleet.get(i));
+
+			System.out.print( i + 1 + ". " );
+			System.out.print( fleet.get(i) );
+			
+			
 			System.out.println();
 		}
 	}
@@ -100,44 +104,38 @@ public class AirField {
 		listAllJets();
 		int removeChoice;
 		System.out.println();
-		System.out.println("Which aircraft do you want to remove from the fleet? ");
+		System.out.println("Enter the jet number that you want to remove from the list above. ");
 		// TODO - need to create a sub-menu with a number at beginning of list of all
 		// jets
 		removeChoice = sc.nextInt();
+		
 		fleet.remove(removeChoice);
 	}
 
 	public void viewFastestJet(List<Jet> fleet) {
-		
+		int fastestIndex = 0;
 		for (Jet jet : fleet) {
-			jet.getRange(); 
-			
-			/*
-			 * How can I adapt this from the Food Truck project?
-			 * 
-			 * 	FoodTruck highestRated = trucks[0];
-
-				for (int i = 0; i < trucks.length; i++) {
-					if (trucks[i] == null) {
-						continue;
-					}
-
-					if (highestRated.getRating() < trucks[i].getRating()) {
-						highestRated = trucks[i];
-					} 
-			 */
-			
+			jet.getSpeed(); 
+			if( jet.getSpeed() > fleet.get(fastestIndex).getSpeed()) {
+				fastestIndex = fleet.indexOf(jet); 
+			} 
 		}
+		System.out.println(fleet.get(fastestIndex)); 
 
 	}
 
-	public void viewJetWithLongestRange() {
-		// will use Jet.getRange? and will need a min max type comparison expression
-
+	public void viewJetWithLongestRange(List<Jet> fleet) {
+		int longestRange = 0;
+		for (Jet jet : fleet) {
+			jet.getRange();
+			if( jet.getRange() > fleet.get(longestRange).getRange()) {
+				longestRange = fleet.indexOf(jet);
+			}
+		}
+		System.out.println( fleet.get(longestRange) ); 
 	}
 
 	public void loadAllCargoPlanes(List<Jet> fleet) {
-		// from fleet of all Jet objects, get typeOfJet.equals("CargoPlane") ?
 		CargoPlane cP = new CargoPlane();
 		
 		for (Jet cargoPlane : fleet) {

@@ -67,10 +67,10 @@ public class JetsApplication {
 					aF.flyAllJets();
 					break;
 				case 3:
-					System.out.println("PLACEHOLDER FOR OPTION 3: METHOD CALL TO DISPLAY FASTEST AIRCRAFT");
+					aF.viewFastestJet(aF.getFleet()); 
 					break;
 				case 4:
-					System.out.println("PLACEHOLDER FOR OPTION 4: METHOD CALL TO DISPLAY JET WITH LONGEST RANGE");
+					aF.viewJetWithLongestRange(aF.getFleet());
 					break;
 				case 5:
 					aF.loadAllCargoPlanes(aF.getFleet()); 
