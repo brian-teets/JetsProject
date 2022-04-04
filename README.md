@@ -88,7 +88,7 @@ Quit exits the program.
 * Run the program
 
 	* At the main menu, enter an integer number corresponding to one of the menu options.
-	* Follow any prompts at sub-menus.
+	* Follow any prompts at sub-menus and enter the expected inputs.
 		
 
 ### Technologies / Skills Used 
