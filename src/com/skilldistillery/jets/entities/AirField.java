@@ -104,7 +104,7 @@ public class AirField {
 			int removeChoice = 0;
 			System.out.println();
 			System.out.println("Enter the jet number that you want to remove from the list above. ");
-			removeChoice = sc.nextInt();
+			removeChoice = sc.nextInt() - 1;
 			
 			fleet.remove(removeChoice); 
 

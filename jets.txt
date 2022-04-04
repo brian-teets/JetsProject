@@ -4,3 +4,4 @@ DeepSpaceUFO,Millenium Falcon,1700.00,150000,5000000
 CargoPlane,Lockheed C-5 Galaxy,579.25,7275,12900000
 FighterJet,Lockheed Martin F-35 Lightning II,1200.00,650,82000000
 FighterJet,X-Wing,1250.00,750,4500000
+FighterJet,Batman's Bat Jet,310,400,3250000
