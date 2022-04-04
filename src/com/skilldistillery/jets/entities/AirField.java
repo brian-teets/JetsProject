@@ -69,8 +69,6 @@ public class AirField {
 
 			System.out.print( i + 1 + ". " );
 			System.out.print( fleet.get(i) );
-			
-			
 			System.out.println();
 		}
 	}
@@ -81,7 +79,7 @@ public class AirField {
 		}
 	}
 
-	public void addAJetToFleet() {
+	public void addAJetToFleet(List<Jet> fleet) {
 		String model = null;
 		double speed = 0.00;
 		int range = 0;
@@ -100,16 +98,20 @@ public class AirField {
 		fleet.add(passengerJet);
 	}
 
-	public void removeAJetFromFleet() {
+	public void removeAJetFromFleet(List<Jet> fleet) {
 		listAllJets();
-		int removeChoice;
-		System.out.println();
-		System.out.println("Enter the jet number that you want to remove from the list above. ");
-		// TODO - need to create a sub-menu with a number at beginning of list of all
-		// jets
-		removeChoice = sc.nextInt();
-		
-		fleet.remove(removeChoice);
+		try {
+			int removeChoice = 0;
+			System.out.println();
+			System.out.println("Enter the jet number that you want to remove from the list above. ");
+			removeChoice = sc.nextInt();
+			
+			fleet.remove(removeChoice); 
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
 	}
 
 	public void viewFastestJet(List<Jet> fleet) {
@@ -124,7 +126,7 @@ public class AirField {
 
 	}
 
-	public void viewJetWithLongestRange(List<Jet> fleet) {
+	public void viewJetWithLongestRange(List<Jet> fleet) { 
 		int longestRange = 0;
 		for (Jet jet : fleet) {
 			jet.getRange();

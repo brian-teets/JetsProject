@@ -80,10 +80,10 @@ public class JetsApplication {
 					aF.callAllFighterJetsToFight(aF.getFleet()); 
 					break;
 				case 7:
-					aF.addAJetToFleet();
+					aF.addAJetToFleet(aF.getFleet());
 					break;
 				case 8:
-					aF.removeAJetFromFleet();
+					aF.removeAJetFromFleet(aF.getFleet());
 					break;
 				case 9:
 					System.out.println("==You chose to quit the application==");
@@ -107,7 +107,6 @@ public class JetsApplication {
 					keepGoing = "N";
 				} 
 			} 
-			
 		} 
 
 	} // end of displayUserMenu method
