@@ -17,15 +17,16 @@ public class FighterJet extends Jet implements CombatReady {
 	@Override
 	public void fight() {
 		
-		for(int i = 0; i < 3; i ++ ) {
-			System.out.print( this.getModel() + " || " + "PEW-PEW!" );
-		} 
+		System.out.println( this.getModel() + " || " + " Attack initiated! " + " ***PEW-PEW*** " + " ***PEW-PEW*** " + " ***PEW-PEW*** "); 
+		System.out.println();
 		
 	}
 
 	@Override
 	public void fly() {
-		System.out.println( this.getModel() + " || Approximate flight time:" + " " + (this.getRange() / this.getSpeed()) + " hours");
+		double t = this.getRange() / this.getSpeed();
+		System.out.printf(this.getModel() + " || Approximate flight time in hours: %.2f\n", t); 
+//		System.out.println( this.getModel() + " || Approximate flight time:" + " " + (this.getRange() / this.getSpeed()) + " hours");
 		System.out.println();
 	}
 	

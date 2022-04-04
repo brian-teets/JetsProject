@@ -110,7 +110,7 @@ public class AirField {
 	public void viewFastestJet(List<Jet> fleet) {
 		
 		for (Jet jet : fleet) {
-			jet.getRange();
+			jet.getRange(); 
 			
 			/*
 			 * How can I adapt this from the Food Truck project?
@@ -136,8 +136,15 @@ public class AirField {
 
 	}
 
-	public void loadAllCargoPlanes() {
+	public void loadAllCargoPlanes(List<Jet> fleet) {
 		// from fleet of all Jet objects, get typeOfJet.equals("CargoPlane") ?
+		CargoPlane cP = new CargoPlane();
+		
+		for (Jet cargoPlane : fleet) {
+			if( cargoPlane.getClass().equals(cP.getClass()) ) {
+				(( CargoPlane ) cargoPlane).loadCargo(); 
+			}
+		}
 
 	}
 

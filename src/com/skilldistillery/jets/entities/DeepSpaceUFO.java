@@ -20,7 +20,9 @@ public class DeepSpaceUFO extends Jet implements UFO {
 
 	@Override
 	public void fly() {
-		System.out.println( this.getModel() + " || Approximate flight time:" + " " + (this.getRange() / this.getSpeed()) + " hours");
+		double t = this.getRange() / this.getSpeed();
+		System.out.printf(this.getModel() + " || Approximate flight time in hours: %.2f\n", t); 
+//		System.out.println( this.getModel() + " || Approximate flight time:" + " " + (this.getRange() / this.getSpeed()) + " hours");
 		System.out.println();
 		
 	} 

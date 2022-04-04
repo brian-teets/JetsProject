@@ -73,7 +73,7 @@ public class JetsApplication {
 					System.out.println("PLACEHOLDER FOR OPTION 4: METHOD CALL TO DISPLAY JET WITH LONGEST RANGE");
 					break;
 				case 5:
-					System.out.println("PLACEHOLDER FOR OPTION 5: SPECIALIALIZED METHOD CALL - LOAD ALL CARGO PLANES ");
+					aF.loadAllCargoPlanes(aF.getFleet()); 
 					break;
 				case 6:
 					// Dogfight menu option
